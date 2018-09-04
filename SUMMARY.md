@@ -9,6 +9,7 @@
 		* [取得安裝金鑰與帳號](prerequisite_key.md)
 		* [設定 DNS records](prerequisite_dns.md)
 		* [開通防火牆設定](prerequisite_firewall.md)
+
 	* 安裝作業
 	* 解除安裝作業
 	* 進階設定
