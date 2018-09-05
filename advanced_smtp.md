@@ -11,7 +11,7 @@ MCSE 預設提供了一組免費的 SMTP 郵件帳號，但因為額度限制，
 
 其修改方式如下：
 
-1. 在 MCSE 的安裝檔案目錄下，編輯 **.env** 檔案中的以下幾個環境參數
+1. 在 MCSE 的安裝檔案目錄下，編輯 `.env` 檔案中的以下幾個環境參數
 
 	* SMTP_USER：您用來登入 SMTP 郵件服務器的帳號名稱
 	* SMTP_PASSWORD：您用來登入 SMTP 郵件服務器的帳號密碼
@@ -21,7 +21,6 @@ MCSE 預設提供了一組免費的 SMTP 郵件帳號，但因為額度限制，
 
 	以下用 SMTP2GO 這個免費的 SMTP 郵件服務器為例，其設定說明可以參考 [https://www.smtp2go.com/setup/](https://www.smtp2go.com/setup/)
 
-
 	```
 	SMTP_USER=mcse
 	SMTP_PASSWORD=dHk2cG9ibjIyxxxx
@@ -30,14 +29,35 @@ MCSE 預設提供了一組免費的 SMTP 郵件帳號，但因為額度限制，
 	SMTP_SSL=true
 	```
 
-2. 修改完成後，儲存 **.env** 檔案，並重新啟動 MCSE 服務，使新的設定生效。或是接續完成其他進階設定後，再一起重啟服務。
+2. 修改完成後，儲存 ``.env`` 檔案，並重新啟動 MCSE 服務，使新的設定生效。或是接續完成其他進階設定後，再一起重啟服務。
 
 	```
 	$ docker-compose stop
 	$ docker-compose up -d
 	```
+	
+	執行範例：
+	
+	```
+	root@mcse-ubuntu:/home/ubuntu/mcse# docker-compose stop
+	Stopping mcse_web_1           ... done
+	Stopping mcse_layout_1        ... done
+	Stopping mcse_mail_1          ... done
+	Stopping mcse_proxy_1         ... done
+	Stopping mcse_oauth_1         ... done
+   ...
+   
+   root@ip-172-31-17-68:/home/ubuntu/mcse# docker-compose up -d
+	Starting mcse_redis_1         ... done
+	Starting mcse_image-resizer_1 ... done
+	Starting mcse_graph_1         ... done
+	Starting mcse_gnatsd_1        ... done
+	Starting mcse_db_1            ... done
+	...
+	
+	```
 
-注意事項：
+**注意事項：**
 
 1. 若您使用的是 Gmail 信箱，建議您先開啟 Google 帳戶的兩步驟驗證功能，並透過應用程式密碼來登入 Gmail 信箱，或是設定允許安全性較低的應用程式存取您的帳戶。詳請請參考 [Gmail 說明文件 -> 疑難排解 -> 無法登入電子郵件程式](https://support.google.com/mail/answer/7126229)的說明。
 

@@ -18,5 +18,10 @@
 	* [進階設定](advanced.md)
 		* [設定 SMTP](advanced_smtp.md)
 		* [手機使用 MCSE](advanced_mobile.md) 	
-* 系統管理
+* [系統管理](operation.md)
+	* [停止服務](operation_stop.md)
+	* [啟動服務](operation_start.md)
+	* [檢查服務](operation_check.md)
+	* [版本升級](operation_upgrade.md)
+
 * [疑難排除](troubleshooting.md)

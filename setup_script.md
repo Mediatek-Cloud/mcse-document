@@ -22,7 +22,7 @@ $ ./install.sh HOST DOCKER_USERNAME DOCKER_PASSWORD DB_PASSWORD LICENSE_KEY
 執行範例：
 
 ```
-$ ./install.sh mcs.example.com docker_user docker1234 db1234 Yt369FVnGL9TDxxxx_dLfCUlZxg==
+root@mcse-ubuntu:/home/ubuntu/mcse# ./install.sh mcs.example.com docker_user docker1234 db1234 Yt369FVnGL9TDxxxx_dLfCUlZxg==
 ```
 
 執行成功結果：

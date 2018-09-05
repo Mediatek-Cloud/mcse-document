@@ -7,7 +7,7 @@
 執行 `uninstall.sh` 腳本，會出現提示 `Do you want to delete all data? [Y/N]:` 請直接輸入 `Y` 並且按下 Enter，整個 MCS 全部服務與資料將會被移除。
 
 ```
-root@mcse-ubuntu:/home/ubuntu# ./uninstall.sh
+root@mcse-ubuntu:/home/ubuntu/mcse# ./uninstall.sh
 Do you want to delete all data? [Y/N]: Y
 
 shutdown all docker container.
