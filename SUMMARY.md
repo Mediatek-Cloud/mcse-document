@@ -10,9 +10,12 @@
 		* [設定 DNS records](prerequisite_dns.md)
 		* [開通防火牆設定](prerequisite_firewall.md)
 
-	* 安裝作業
-	* 解除安裝作業
-	* 進階設定
+	* [安裝與移除](setup.md)
+		* [執行安裝腳本](setup_script.md) 
+		* [驗證安裝結果](setup_result.md)
+		* [解除安裝作業](uninstall.md)
+
+	* [進階設定](advanced.md)
 		* [設定 SMTP](advanced_smtp.md)
 		* [手機使用 MCSE](advanced_mobile.md) 	
 * 系統管理
