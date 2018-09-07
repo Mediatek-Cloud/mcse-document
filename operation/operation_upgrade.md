@@ -12,14 +12,14 @@
 
 ```text
   api:
-    image: harbor.wu-boy.com/mcse/api:mcse-0.0.1
+    image: docker.mediatek.io/mcse/api:mcse-0.0.1
 ```
 
 將 0.0.1 換成 0.0.2
 
 ```text
   api:
-    image: harbor.wu-boy.com/mcse/api:mcse-0.0.2
+    image: docker.mediatek.io/mcse/api:mcse-0.0.2
 ```
 
 ### 下載映像檔
