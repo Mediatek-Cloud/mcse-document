@@ -26,7 +26,7 @@
 
 * Docker 容器 \(Container\): 透過 `docker-compose ps` 指令看每個服務是否在運行中，`STATUS = Up` 或 `STATUS = Up (healthy)`。
 
-	如果無法正常運作，請嘗試停止並重啟此單一服務，或整個 MCSE（請參考[系統管理](./operation.md)章節）
+	如果無法正常運作，請嘗試停止並重啟此單一服務，或整個 MCSE（請參考[系統管理](./operation)章節）
 
   執行範例：
 
