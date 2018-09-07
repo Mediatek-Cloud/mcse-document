@@ -1,12 +1,13 @@
 # 目錄
-* MCSE 概述
-	* [用途及應用場景](overview.md)
-	* MCSE服務架構
-* MCSE 安裝與設定
+
+* [MCSE 概述](overview.md)
+	* [用途及應用場景](purpose.md)
+	* [MCSE 服務架構](infrastructure.md)
+* [MCSE 安裝與設定](setup_and_setting.md)
 	* [系統需求](system_requirement.md)
 	* [安裝人員須具備的能力](capability.md)
-	* 前置作業
-		* [取得安裝金鑰與帳號](prerequisite_key.md)
+	* [前置作業](prerequisite.md)
+		* [取得安裝檔案與金鑰](prerequisite_key.md)
 		* [設定 DNS records](prerequisite_dns.md)
 		* [開通防火牆設定](prerequisite_firewall.md)
 

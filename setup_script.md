@@ -1,8 +1,38 @@
 # 執行安裝腳本
 
+## 下載與解壓縮
+
+首先，請您先下載 MCSE 安裝檔（若要取得檔案，請洽 MCSE 業務窗口 *mediatekcloudsandbox@mediatek.com*），將檔案置於您預安裝 MCSE 的 Ubuntu 的機器上並且解壓縮。
+
+執行範例：
+
+1. 下載 MCSE 安裝檔
+
+	```
+	$ wget https://s3-us-west-2.amazonaws.com/xxxxx/release.tar.gz
+	```
+
+2. 將安裝檔解壓縮，並透過 `ls` 檢查檔案是否正確
+
+	```
+	$ tar -xvf release.tar.gz 
+	$ ls -al
+	total 204
+	drwxrwxr-x  4 ubuntu ubuntu   4096 Sep  7 08:19 .
+	drwxr-xr-x 11 ubuntu ubuntu   4096 Sep  7 08:15 ..
+	-rw-r--r--  1 ubuntu ubuntu    835 Aug 27 07:00 Caddyfile
+	-rw-r--r--  1 ubuntu ubuntu   9431 Aug 27 07:00 docker-compose.yml
+	-rw-r--r--  1 ubuntu ubuntu    488 Aug 27 07:00 .env
+	drwxr-xr-x  2 ubuntu ubuntu   4096 Aug  2 07:13 images
+	-rwxr-xr-x  1 ubuntu ubuntu   3420 Aug 29 09:25 install.sh
+	-rw-rw-r--  1 ubuntu ubuntu 158624 Aug 29 09:27 release.tar.gz
+	drwxr-xr-x  2 ubuntu ubuntu   4096 Aug  6 01:20 sql
+	-rwxr-xr-x  1 ubuntu ubuntu    645 Aug 27 07:00 uninstall.sh
+	```
+
 ## 腳本與參數
 
-為了簡化安裝流程，MCSE 提供了一套安裝腳本，您可以直接執行這套腳本進行安裝。
+為了簡化安裝流程，MCSE 提供了一套安裝腳本 `install.sh`，您可以直接執行這套腳本進行安裝。
 
 ```
 $ ./install.sh HOST DOCKER_USERNAME DOCKER_PASSWORD DB_PASSWORD LICENSE_KEY
@@ -30,6 +60,7 @@ $ ./install.sh mcs.example.com \
 ```
 
 執行成功結果：
+
 ![](./images/setup_success.png)
 
 ## 系統參數

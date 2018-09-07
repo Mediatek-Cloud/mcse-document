@@ -2,9 +2,10 @@
 
 若您想使用 MCSE 服務，請先與我們的業務窗口聯絡 [mediatekcloudsandbox@mediatek.com](mediatekcloudsandbox@mediatek.com)
 
-在確認您的需求與相關權限後，你將會收到來自 MediaTek Cloud Sandbox 團隊的電子郵件，其中包含安裝金鑰與帳號：
+在確認您的需求與相關權限後，你將會收到來自 MediaTek Cloud Sandbox 團隊的電子郵件，其中包含安裝檔案、金鑰與帳號：
 
-1. DOCKER_USERNAME：於 Docker Registry 下載 Docker Image 的帳號
+1. MCSE 私有雲套件安裝檔
+2. DOCKER_USERNAME：於 Docker Registry 下載 Docker Image 的帳號
 2. DOCKER_PASSWORD：於 Docker Registry 下載 Docker Image 的密碼
 3. LICENSE_KEY：安裝MCS Enterprise的產品金鑰
 
