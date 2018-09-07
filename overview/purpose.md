@@ -10,15 +10,15 @@
 
 以下是線上版 MCS 雲服務及 MCSE 的簡易比較表：
 
-![](./images/MCS_MCSE.png)
+![](../.gitbook/assets/mcs_mcse.png)
 
+我們將 MCS 上所有的功能，以 Docker 容器技術封裝成一個軟體型式的鏡像檔 \(Docker Image\)，並將此軟體授權給您使用。
 
-我們將 MCS 上所有的功能，以 Docker 容器技術封裝成一個軟體型式的鏡像檔 (Docker Image)，並將此軟體授權給您使用。
+您可以透過簡單的 Linux 指令，一鍵將整個 MCSE 安裝在您屬意的公有雲 \(如AWS、Azure、GCP等\)，面對您所處行業的客戶；或是將 MCSE 部署在本地端的伺服器上 \(如 IBM 或 HP server\)，供您的物聯網裝置或提供給需要私有雲的客戶。
 
-您可以透過簡單的 Linux 指令，一鍵將整個 MCSE 安裝在您屬意的公有雲 (如AWS、Azure、GCP等)，面對您所處行業的客戶；或是將 MCSE 部署在本地端的伺服器上 (如 IBM 或 HP server)，供您的物聯網裝置或提供給需要私有雲的客戶。
-
-MCSE 也會提供有別於 MCS 的企業專屬功能，您可以透過 Docker 的鏡像檔管理倉庫 (Docker Registry)，隨時獲得 MCSE 的更新。
+MCSE 也會提供有別於 MCS 的企業專屬功能，您可以透過 Docker 的鏡像檔管理倉庫 \(Docker Registry\)，隨時獲得 MCSE 的更新。
 
 此外，您還可以將裝置資料，透過 MCSE 的資料接口導入熟悉的資料庫，進行數據的管理、分析及商業決策。
 
 下面的章節，我們將一步步引導您完成 MCSE 的安裝。
+

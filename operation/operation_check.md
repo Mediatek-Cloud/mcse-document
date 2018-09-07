@@ -2,16 +2,17 @@
 
 ## 服務是否正常運行
 
-```
+```text
 $ docker-compose ps
 ```
 
-![](./images/docker-compose-ps.png)
+![](../.gitbook/assets/docker-compose-ps.png)
 
 ## 服務所耗系統資源
 
-```
+```text
 $ docker stats
 ```
 
-![](./images/docker-stats.png)
+![](../.gitbook/assets/docker-stats.png)
+

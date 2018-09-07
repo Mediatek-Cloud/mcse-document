@@ -6,7 +6,7 @@
 
 執行範例：
 
-```
+```text
 root@mcse-ubuntu:/home/ubuntu/mcse# docker-compose stop
 Stopping mcse_web_1           ... done
 Stopping mcse_layout_1        ... done
@@ -26,21 +26,20 @@ Stopping mcse_minio_1         ... done
 Stopping mcse_db_1            ... done
 ```
 
-
 ## 停止單一服務
 
 請先切換目錄到放置 `docker-compose.yml` 的目錄，並且執行 `docker-compose stop 服務名稱` 指令來停止指定的 MCSE 服務。
 
 執行範例：
 
-```
+```text
 root@mcse-ubuntu:/home/ubuntu/mcse# docker-compose stop web
 Stopping mcse_web_1 ... done
 ```
 
 其中 `服務名稱` 請參考 docker-compose 內定義的各項服務。見底下的範例，`proxy`、`web`、`api` 為服務名稱。
 
-```
+```text
 ubuntu@mcse-ubuntu:~/mcse$ cat docker-compose.yml 
 version: '2'
 
@@ -69,4 +68,6 @@ services:
     ports:
       - "3000:3000"
 ...
-````
+`
+```
+

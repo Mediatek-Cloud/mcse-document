@@ -1,26 +1,15 @@
-# 疑難排除
+# 驗證安裝結果
 
-## 1. 啟動 MCSE 服務後，透過瀏覽器訪問會看到**連線失敗**或是 **This site can’t be reached** 的錯誤訊息。
+1. 打開瀏覽器，輸入 MCSE 網址（MCSE www 服務的主機名稱\)，例如：www.mcs.example.com，能看到如下的登入畫面則代表網頁服務啟動成功。
 
-請檢查您的 **Caddy 伺服器** 與 MCSE 服務的 **Docker 容器 \(Container\)**是否正常運行。
+   ![](../../.gitbook/assets/web_login.png)
 
-* Caddy: 透過 `ps` 指令看 caddy 是否在運行中。
+2. 要檢查每個微服務的運行狀況，則可在 Terminal 視窗下，執行底下指令 \(請使用 root 帳號\):
 
-  執行範例：
-
-  ```text
-    root@mcse-ubuntu:/home/ubuntu/mcse# ps -aux|grep caddy
-    ubuntu   13915  0.0  0.3  18816 12788 pts/0    Sl   05:40   0:00 caddy -conf Caddyfile
-    ubuntu   19592  0.0  0.0  12944  1088 pts/0    S+   05:44   0:00 grep --color=auto caddy
-  ```
-
-* Docker 容器 \(Container\): 透過 `docker-compose ps` 指令看每個服務是否在運行 \(STATUS = Up\) 中。
-
-  執行範例：
-
-  ```text
+```text
     root@mcse-ubuntu:/home/ubuntu/mcse# docker-compose ps
-            Name                      Command                   State                            Ports                     
+
+                Name                      Command                   State                            Ports                     
     -----------------------------------------------------------------------------------------------------------------------
     mcse_api_1             sh scripts/docker.sh             Up               0.0.0.0:3000->3000/tcp                        
     mcse_db_1              docker-entrypoint.sh postgres    Up               0.0.0.0:5433->5432/tcp                        
@@ -38,5 +27,9 @@
     mcse_redis_1           docker-entrypoint.sh redis ...   Up               0.0.0.0:6378->6379/tcp                        
     mcse_service_1         node build/app.js                Up (healthy)     8080/tcp                                      
     mcse_web_1             /bin/sh -c ./web                 Up (healthy)     0.0.0.0:4001->4000/tcp
-  ```
+```
+
+```text
+看到每個服務都是 `Up` 狀態，就代表安裝並且啟動成功。
+```
 

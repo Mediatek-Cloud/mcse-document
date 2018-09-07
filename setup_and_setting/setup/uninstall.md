@@ -6,7 +6,7 @@
 
 執行 `uninstall.sh` 腳本，會出現提示 `Do you want to delete all data? [Y/N]:` 請直接輸入 `Y` 並且按下 Enter，整個 MCS 全部服務與資料將會被移除。
 
-```
+```text
 root@mcse-ubuntu:/home/ubuntu/mcse# ./uninstall.sh
 Do you want to delete all data? [Y/N]: Y
 
@@ -52,5 +52,4 @@ remove minio tool and config.
 remove caddy process from /etc/rc.local
 Uninstall completely.
 ```
-
 

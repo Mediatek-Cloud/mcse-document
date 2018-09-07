@@ -6,7 +6,7 @@
 
 執行範例：
 
-```
+```text
 root@mcse-ubuntu:/home/ubuntu/mcse# docker-compose up -d
 Starting mcse_redis_1         ... done
 Starting mcse_image-resizer_1 ... done
@@ -26,14 +26,13 @@ Starting mcse_proxy_1         ... done
 Starting mcse_web_1           ... done
 ```
 
-
 ## 啟動單一服務
 
 請先切換目錄到放置 `docker-compose.yml` 的目錄，並且執行 `docker-compose up -d 服務名稱` 指令來啟動指定的 MCSE 服務。
 
 執行範例：
 
-```
+```text
 root@mcse-ubuntu:/home/ubuntu/mcse# docker-compose up -d api
 mcse_gnatsd_1 is up-to-date
 mcse_redis_1 is up-to-date
@@ -44,7 +43,7 @@ Starting mcse_api_1 ... done
 
 其中 `服務名稱` 請參考 docker-compose 內定義的各項服務。見底下的範例，`proxy`、`web`、`api` 為服務名稱。
 
-```
+```text
 ubuntu@mcse-ubuntu:~/mcse$ cat docker-compose.yml 
 version: '2'
 
@@ -74,3 +73,4 @@ services:
       - "3000:3000"
 ...
 ```
+

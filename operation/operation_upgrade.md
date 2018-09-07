@@ -2,27 +2,22 @@
 
 ## 升級 API 服務
 
-假設現在要升級 API 服務該怎麼升級 (從 0.0.1 升級到 0.0.2)
-
+假設現在要升級 API 服務該怎麼升級 \(從 0.0.1 升級到 0.0.2\)
 
 版號由 Mediatek 團隊告知
 
 ### 修改 docker-compose 檔案
 
-
 找到底下:
 
-
-```
+```text
   api:
     image: harbor.wu-boy.com/mcse/api:mcse-0.0.1
 ```
 
-
 將 0.0.1 換成 0.0.2
 
-
-```
+```text
   api:
     image: harbor.wu-boy.com/mcse/api:mcse-0.0.2
 ```
@@ -31,16 +26,14 @@
 
 下載單一服務映像檔
 
-```
+```text
 $ docker-compose pull api
 Pulling api ... done
 ```
 
-
 假設有多個服務需要升級，可以使用底下指令
 
-
-```
+```text
 $ docker-compose pull
 Pulling minio         ... done
 Pulling image-resizer ...
@@ -60,12 +53,9 @@ Pulling layout        ... done
 Pulling graph         ...
 ```
 
-
-
 ### 停止及刪除 API 服務
 
-
-```
+```text
 $ docker-compose stop api
 Stopping root_api_1 ... done
 $ docker-compose rm -f api
@@ -73,10 +63,10 @@ Going to remove root_api_1
 Removing root_api_1 ... done
 ```
 
-
 ### 啟動 API 服務
 
-```
+```text
 $ docker-compose up -d api
 Creating root_api_1    ... done
 ```
+
