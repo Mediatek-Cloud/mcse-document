@@ -7,26 +7,26 @@
 * Caddy: 透過 `ps` 指令看 caddy 是否在運行中。若 `caddy -conf Caddyfile` 不存在，則切換至 MCSE 安裝檔案目錄，執行 Caddy 服務。
 
   執行範例：
-  
+
   * Caddy 正常運行中 
 
-  ```
-	root@mcse-ubuntu:/home/ubuntu/mcse# ps -aux|grep caddy
+  ```text
+    root@mcse-ubuntu:/home/ubuntu/mcse# ps -aux|grep caddy
     ubuntu   13915  0.0  0.3  18816 12788 pts/0    Sl   05:40   0:00 caddy -conf Caddyfile
     ubuntu   19592  0.0  0.0  12944  1088 pts/0    S+   05:44   0:00 grep --color=auto caddy
   ```
-  
+
   * Caddy 服務不存在
 
-  ```
-	root@mcse-ubuntu:/home/ubuntu/mcse# ps -aux|grep caddy
+  ```text
+    root@mcse-ubuntu:/home/ubuntu/mcse# ps -aux|grep caddy
     ubuntu   19592  0.0  0.0  12944  1088 pts/0    S+   05:44   0:00 grep --color=auto caddy
     root@mcse-ubuntu:/home/ubuntu/mcse# caddy -conf Caddyfile &
   ```
 
 * Docker 容器 \(Container\): 透過 `docker-compose ps` 指令看每個服務是否在運行中，`STATUS = Up` 或 `STATUS = Up (healthy)`。
 
-	如果無法正常運作，請嘗試停止並重啟此單一服務，或整個 MCSE（請參考[系統管理](./operation)章節）
+  如果無法正常運作，請嘗試停止並重啟此單一服務，或整個 MCSE（請參考[系統管理]()章節）
 
   執行範例：
 

@@ -78,7 +78,7 @@ MCSE 已經將幾個常修改的參數設定在 `.env` 檔案當中，您可在�
 | DB\_PORT | 資料庫連接埠 | 5432 |  |
 | GCM\_SENDER\_ID | GCM Sender ID |  | Google 已於 2018 年 4 月終止新的 GCM 服務申請，若您之前不曾申請過此服務，可使用 MCSE 預設提供的 ID 不需更換 |
 | GCM\_API\_KEY | GCM API Key |  | 同上 |
-| SMTP\_USER | SMTP 使用者名稱 | cettoana@gmail.com | 詳情可見 [進階設定- SMTP](../advanced/advanced_smtp.md) |
+| SMTP\_USER | SMTP 使用者名稱 | cettoana@gmail.com | 詳情可見 [進階設定- SMTP](../jin-jie-she-ding/advanced_smtp.md) |
 | SMTP\_PASSWORD | SMTP 使用者密碼 | RnKA5TUcm8Yo | 同上 |
 | SMTP\_HOST | SMTP 服務器網址 | mail.smtp2go.com | 同上 |
 | SMTP\_PORT | SMTP 服務連接埠 | 465 | 同上 |
