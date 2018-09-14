@@ -52,3 +52,20 @@
     mcse_web_1             /bin/sh -c ./web                 Up (healthy)     0.0.0.0:4001->4000/tcp
   ```
 
+
+## 2. 開啟 MCSE 網頁，登入後頁面只能看到 Header 與 Footer 但中間內容為空白。
+
+登入 MCSE 之後，主要頁面是由 **api** 服務來處理，因此當頁面空白時請透過以下幾個步驟來查找問題。
+
+1. 透過 `docker-compose ps` 來查看各個服務是否正常運行。若有任何服務出現錯誤，請重新啟動。若問題仍然發生或是您想針對問題作進一步的研究，請參考下面步驟。
+
+2. 使用瀏覽器的 **開發人員工具**，切換至 **網路面板**，此時刷新 MCSE 頁面，觀察開發人員工具中的網頁請求看是否有出現錯誤（紅色）的請求紀錄，api 服務的網域名稱為 **api.mcs.example.com** 其中 example.com 請自行轉換成您的網域。找到錯誤的 api 請求後，請選取此請求並且切換至此請求的 **回應** 頁面，並記錄下服務器所回傳的錯誤訊息。
+
+	![](./images/network_panel.png)
+
+	詳細用法可參考 [Chrome 的網路面板教學](https://developers.google.com/web/tools/chrome-devtools/network-performance/resource-loading?hl=zh-tw)
+
+3. 透過 `docker-compose logs -f 服務名稱` 來查看各個服務的日誌。若步驟 2 中，有發現 api 服務回應錯誤，則可利用 `docker-compose logs -f api` 收集到個精確的系統日誌。
+
+
+有了以上的錯誤訊息，您可針對問題進行排解，或將資訊提供給 MCSE 聯絡窗口幫忙處理。
