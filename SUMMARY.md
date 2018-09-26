@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [MediaTek Cloud Sandbox for Enterprise](README.md)
 * [MCSE 概述](overview/README.md)
   * [用途及應用場景](overview/purpose.md)
   * [MCSE 服務架構](overview/infrastructure.md)

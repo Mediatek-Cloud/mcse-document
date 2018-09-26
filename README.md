@@ -4,5 +4,5 @@
 
 ### 2. 當執行 `docker-compose` 或任何 MCSE 管理相關的指令時，請切換目錄至 MCSE 安裝目錄。
 
-
+#### 想了解更多，歡迎聯絡我們：*mtkcloudsandbox@mediatek.com*
 
