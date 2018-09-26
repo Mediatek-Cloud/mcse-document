@@ -11,6 +11,9 @@
 | gq.mcs.example.com | CNAME | mcs.example.com | 主要用來提供後端服務，像是場景\(Scene\)功能。 |
 | image.mcs.example.com | CNAME | mcs.example.com | 主要用來提供圖片讀取服務，像是產品原型或是場景\(Scene\)底圖。 |
 | minio.mcs.example.com | CNAME | mcs.example.com | 主要用來提供檔案的儲存服務，像是上傳的圖片與固件。 |
+| stream.mcs.example.com | CNAME | mcs.example.com | 主要用來提供 MCSE 網頁透過 WebSocket 播放使用者上傳的即時影像串流 |
+| upload-stream.mcs.example.com | CNAME | mcs.example.com | 主要用來讓使用者上傳即時影像串流 |
+
 
 當然，您可以將 MCSE 的主要 A record 命名成任何符合您的應用或企業名稱相關的網址，而其他的 MCSE 服務的網址則保持服務名稱，例如 www, api, mqtt 等加上 A record 的命名規則。
 
