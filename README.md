@@ -1,8 +1,8 @@
-# MCSE 教學文件
+# MediaTek Cloud Sandbox for Enterprise
 
-### 1. 文件中所有的 MCSE 的安裝及管理步驟，請使用 `root` 權限操作。
+## 1. 文件中所有的 MCSE 的安裝及管理步驟，請使用 `root` 權限操作。
 
-### 2. 當執行 `docker-compose` 或任何 MCSE 管理相關的指令時，請切換目錄至 MCSE 安裝目錄。
+## 2. 當執行 `docker-compose` 或任何 MCSE 管理相關的指令時，請切換目錄至 MCSE 安裝目錄。
 
-#### 想了解更多，歡迎聯絡我們：*mtkcloudsandbox@mediatek.com*
+### 想了解更多，歡迎聯絡我們：_mtkcloudsandbox@mediatek.com_
 

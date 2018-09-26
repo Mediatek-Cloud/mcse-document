@@ -26,7 +26,7 @@
 
 * Docker 容器 \(Container\): 透過 `docker-compose ps` 指令看每個服務是否在運行中，`STATUS = Up` 或 `STATUS = Up (healthy)`。
 
-  如果無法正常運作，請嘗試停止並重啟此單一服務，或整個 MCSE（請參考[系統管理]()章節）
+  如果無法正常運作，請嘗試停止並重啟此單一服務，或整個 MCSE（請參考[系統管理](troubleshooting.md)章節）
 
   執行範例：
 
@@ -52,43 +52,41 @@
     mcse_web_1             /bin/sh -c ./web                 Up (healthy)     0.0.0.0:4001->4000/tcp
   ```
 
-
 ## 2. 開啟 MCSE 網頁，登入後頁面只能看到 Header 與 Footer 但中間內容為空白。
 
 登入 MCSE 之後，主要頁面是由 **api** 服務來處理，因此當頁面空白時請透過以下幾個步驟來查找問題。
 
 1. 透過 `docker-compose ps` 來查看各個服務是否正常運行。若有任何服務出現錯誤，請重新啟動。若問題仍然發生或是您想針對問題作進一步的研究，請參考下面步驟。
-
 2. 使用瀏覽器的 **開發人員工具**，切換至 **網路面板**，此時刷新 MCSE 頁面，觀察開發人員工具中的網頁請求看是否有出現錯誤（紅色）的請求紀錄，api 服務的網域名稱為 **api.mcs.example.com** 其中 example.com 請自行轉換成您的網域。找到錯誤的 api 請求後，請選取此請求並且切換至此請求的 **回應** 頁面，並記錄下服務器所回傳的錯誤訊息。
 
-	![](./images/network_panel.png)
+   ![](.gitbook/assets/network_panel.png)
 
-	詳細用法可參考 [Chrome 的網路面板教學](https://developers.google.com/web/tools/chrome-devtools/network-performance/resource-loading?hl=zh-tw)
+   詳細用法可參考 [Chrome 的網路面板教學](https://developers.google.com/web/tools/chrome-devtools/network-performance/resource-loading?hl=zh-tw)
 
 3. 透過 `docker-compose logs -f 服務名稱` 來查看各個服務的日誌。若步驟 2 中，有發現 api 服務回應錯誤，則可利用 `docker-compose logs -f api` 收集到個精確的系統日誌。
-
 
 有了以上的錯誤訊息，您可針對問題進行排解，或將資訊提供給 MCSE 聯絡窗口幫忙處理。
 
 ## 3. MCSE 無法正常寄發郵件
 
-若您是使用 MCSE 預設的 SMTP 帳號，由於此帳號是與其他客戶共用發信額度，所以當寄發數量到達**額度上限**時，會導致後續的信件無法被寄出。建議您在正式使用 MCSE 時，請將 SMTP 帳號置換成您自有的帳號。詳細步驟請參考：[設定 SMTP](./setup_and_setting/advanced/advanced_smtp.md)
+若您是使用 MCSE 預設的 SMTP 帳號，由於此帳號是與其他客戶共用發信額度，所以當寄發數量到達**額度上限**時，會導致後續的信件無法被寄出。建議您在正式使用 MCSE 時，請將 SMTP 帳號置換成您自有的帳號。詳細步驟請參考：[設定 SMTP](setup_and_setting/advanced/advanced_smtp.md)
 
 MCSE 會寄發有三種郵件，若只有特定的郵件無法送出，可檢查該服務的日誌或重啟服務。
 
 1. 註冊後的認證信：由 **oauth** 服務負責寄發。透過查看 oauth 服務日誌中 **oauth email service error** 的錯誤訊息，可協助您修正問題，以下為帳號密碼錯誤的範例。
-	
-	```
-	$ docker-compose logs -f oauth
-	...
-	oauth_1          | 2018-09-26T02:55:11.967Z oauth email service error:  { Error: authorization.failed (bad response on command 'QWEwMTEwdGVzdHk=': -5.7.8 Username and Password not accepted. Learn more at)
-	oauth_1          |     at SMTPError (/app/node_modules/emailjs/smtp/error.js:6:3)
-	oauth_1          |    { Error: bad response on command 'QWEwMTEwdGVzdHk=': -5.7.8 Username and Password not 
-	oauth_1          |      smtp: '535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials h69-v6sm7828662pfh.13 - gsmtp\r\n',
-	...
-	```
+
+   ```text
+    $ docker-compose logs -f oauth
+    ...
+    oauth_1          | 2018-09-26T02:55:11.967Z oauth email service error:  { Error: authorization.failed (bad response on command 'QWEwMTEwdGVzdHk=': -5.7.8 Username and Password not accepted. Learn more at)
+    oauth_1          |     at SMTPError (/app/node_modules/emailjs/smtp/error.js:6:3)
+    oauth_1          |    { Error: bad response on command 'QWEwMTEwdGVzdHk=': -5.7.8 Username and Password not 
+    oauth_1          |      smtp: '535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials h69-v6sm7828662pfh.13 - gsmtp\r\n',
+    ...
+   ```
 
 2. 滿足觸發條件後的通知信：由 **mail** 服務負責寄發。
 3. 分享原型與裝置的通知信：由 **api** 服務負責寄發。
 
-其他部分請參考 [設定 SMTP 注意事項](./setup_and_setting/advanced/advanced_smtp.md#注意事項)
+其他部分請參考 [設定 SMTP 注意事項](setup_and_setting/advanced/advanced_smtp.md#notice)
+
