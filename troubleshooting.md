@@ -69,3 +69,26 @@
 
 
 有了以上的錯誤訊息，您可針對問題進行排解，或將資訊提供給 MCSE 聯絡窗口幫忙處理。
+
+## 3. MCSE 無法正常寄發郵件
+
+若您是使用 MCSE 預設的 SMTP 帳號，由於此帳號是與其他客戶共用發信額度，所以當寄發數量到達**額度上限**時，會導致後續的信件無法被寄出。建議您在正式使用 MCSE 時，請將 SMTP 帳號置換成您自有的帳號。詳細步驟請參考：[設定 SMTP](./setup_and_setting/advanced/advanced_smtp.md)
+
+MCSE 會寄發有三種郵件，若只有特定的郵件無法送出，可檢查該服務的日誌或重啟服務。
+
+1. 註冊後的認證信：由 **oauth** 服務負責寄發。透過查看 oauth 服務日誌中 **oauth email service error** 的錯誤訊息，可協助您修正問題，以下為帳號密碼錯誤的範例。
+	
+	```
+	$ docker-compose logs -f oauth
+	...
+	oauth_1          | 2018-09-26T02:55:11.967Z oauth email service error:  { Error: authorization.failed (bad response on command 'QWEwMTEwdGVzdHk=': -5.7.8 Username and Password not accepted. Learn more at)
+	oauth_1          |     at SMTPError (/app/node_modules/emailjs/smtp/error.js:6:3)
+	oauth_1          |    { Error: bad response on command 'QWEwMTEwdGVzdHk=': -5.7.8 Username and Password not 
+	oauth_1          |      smtp: '535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials h69-v6sm7828662pfh.13 - gsmtp\r\n',
+	...
+	```
+
+2. 滿足觸發條件後的通知信：由 **mail** 服務負責寄發。
+3. 分享原型與裝置的通知信：由 **api** 服務負責寄發。
+
+其他部分請參考 [設定 SMTP 注意事項](./setup_and_setting/advanced/advanced_smtp.md#注意事項)

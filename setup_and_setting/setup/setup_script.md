@@ -86,5 +86,7 @@ MCSE 已經將幾個常修改的參數設定在 `.env` 檔案當中，您可在�
 | PROTOCOL | MCSE 服務連線協定 | http | http, https（稍後章節會介紹如何設定 HTTPS 網頁服務器） |
 | S3\_SSL | 啟動 S3 SSL | false | true, false |
 
-**注意事項**：這些參數會在執行 install.sh 時帶入（請見表格一），因此無需事前修改 `.env` 檔案；若您事先修改了 `.env`這些參數，再次執行 install.sh 時，帶入的參數則無法作用。
+### 注意事項 
+
+這些參數會在執行 install.sh 時帶入（請見表格一），因此無需事前修改 `.env` 檔案；若您事先修改了 `.env`這些參數，再次執行 install.sh 時，帶入的參數則無法作用。
 
