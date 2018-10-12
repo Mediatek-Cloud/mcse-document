@@ -27,4 +27,5 @@ MCSE 整體系統，是透過數個部署於容器 \(Container\)的微服務 \(M
 | proxy | mcs 網站 scene frontend service | 前端 |
 | layout | mcs 整個網站前端畫面 | 前端 |
 | web | 整合 restful + graphql + websocket 服務 | 後端 |
+| video | 提供影像串流服務 | 後端 |
 
