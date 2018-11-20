@@ -14,7 +14,6 @@
 | stream.mcs.example.com | CNAME | mcs.example.com | 主要用來提供 MCSE 網頁透過 WebSocket 播放使用者上傳的即時影像串流 |
 | upload-stream.mcs.example.com | CNAME | mcs.example.com | 主要用來讓使用者上傳即時影像串流 |
 
-
 當然，您可以將 MCSE 的主要 A record 命名成任何符合您的應用或企業名稱相關的網址，而其他的 MCSE 服務的網址則保持服務名稱，例如 www, api, mqtt 等加上 A record 的命名規則。
 
 稍後，在您使用 MCSE 安裝腳本進行自動安裝時，需將網域名稱填入（上述設定的 DNS A record），詳細安裝步驟請參考後續章節。

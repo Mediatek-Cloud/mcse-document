@@ -25,4 +25,5 @@
   * [檢查服務](operation/operation_check.md)
   * [版本升級](operation/operation_upgrade.md)
 * [疑難排除](troubleshooting.md)
+* [資料庫管理](liao-guan-li.md)
 
